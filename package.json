@@ -1,0 +1,12 @@
+{
+  "name": "linkedlist",
+  "version": "1.0.0",
+  "description": "Nodejs app - LL create, update, deate, read",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose test/*",
+    "start":"node index.js"
+  },
+  "author": "Sangeetha",
+  "license": "ISC"
+}
