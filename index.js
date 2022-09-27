@@ -1,9 +1,5 @@
-const ListNode = require("./structure/ListNode");
+const LinkedList = require("./structure/LinkedList");
 
-const reverseLinkedList = (head) => {
-    let 
-   const newCurrentNode = new ListNode()
-    
-}
+const months = new LinkedList()
 
 
