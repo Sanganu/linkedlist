@@ -5,17 +5,18 @@ class LinkedList {
         this.head = null;
     }
     addToHead(data) {
-        let newHead = new Node(data);
+        let newHead = new ListNode(data);
         if (this.head) {
             newHead.setNextNode(this.head)
-            this.head = newHead
         }
+        this.head = newHead
     }
     addToTail(data){
-        let newTail = new Node(data);
+        let newTail = new ListNode(data);
         let currentNode = this.head;
-        while(currentNode){
-            currentNode = currentNode.getNextNode()
+        while(currentNode.getNextNode() !== null){
+         
+            currentNode =  currentNode.getNextNode()
         }
         currentNode.setNextNode(newTail)
     }
@@ -31,6 +32,7 @@ class LinkedList {
           currentNode = currentNode.getNextNode();
         }
         output += '<tail>';
+        console.log("---Linked List---")
         console.log(output);
       }
 

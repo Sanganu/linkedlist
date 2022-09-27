@@ -1,5 +1,5 @@
 class ListNode{
-    constructor(value,next){
+    constructor(value){
         this.value = value
         this.next = null
     }
@@ -16,4 +16,4 @@ class ListNode{
 
 }
 
-module.export = ListNode;
+module.exports = ListNode;
