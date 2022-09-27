@@ -14,6 +14,9 @@ class ListNode{
         return this.next;
     }
 
+    getData(){
+        return this.value;
+    }
 }
 
 module.exports = ListNode;

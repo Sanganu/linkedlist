@@ -28,7 +28,7 @@ class LinkedList {
         let currentNode = this.head;
         let output = '<head> ';
         while (currentNode!== null) {
-          output += currentNode.data + ' ';
+          output += currentNode.getData() + ' ';
           currentNode = currentNode.getNextNode();
         }
         output += '<tail>';
