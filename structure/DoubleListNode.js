@@ -13,6 +13,12 @@ class DoubleListNode{
     setNextNode(node){
         this.next = node;
     }
+    getPreviousNode(){
+        return this.previous;
+    }
+    getNextNode(){
+        return this.next;
+    }
 }
 
 module.exports = DoubleListNode;
