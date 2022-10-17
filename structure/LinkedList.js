@@ -11,30 +11,38 @@ class LinkedList {
         }
         this.head = newHead
     }
-    addToTail(data){
+    addToTail(data) {
         let newTail = new ListNode(data);
         let currentNode = this.head;
-        while(currentNode.getNextNode() !== null){
-         
-            currentNode =  currentNode.getNextNode()
+        if (!currentNode) {
+            this.head = newTail;
+
+        } else {
+            let previousNode = currentNode;
+            while (currentNode !== null) {
+                previousNode = currentNode;
+               // console.log(previousNode)
+                currentNode = currentNode.getNextNode()
+
+            }
+            previousNode.setNextNode(newTail)
         }
-        currentNode.setNextNode(newTail)
     }
-    removeHeadNode(){
+    removeHeadNode() {
         let newHead = this.head.getNextNode()
         this.head = newHead
     }
     printList() {
         let currentNode = this.head;
         let output = '<head> ';
-        while (currentNode!== null) {
-          output += currentNode.getData() + ' ';
-          currentNode = currentNode.getNextNode();
+        while (currentNode !== null) {
+            output += currentNode.getData() + ' -> ';
+            currentNode = currentNode.getNextNode();
         }
         output += '<tail>';
-        console.log("---Linked List---")
+       
         console.log(output);
-      }
+    }
 
 }
 

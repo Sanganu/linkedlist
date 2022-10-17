@@ -4,7 +4,7 @@ class DoubleListNode{
         this.previous = null;
         this.next = null;
     }
-    getNodeDate(){
+    getNodeData(){
         return this.value;
     }
     setPreviousNode(node){

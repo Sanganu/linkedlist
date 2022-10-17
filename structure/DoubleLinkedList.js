@@ -4,7 +4,9 @@ class DoubleLinkedList{
     constructor(){
         this.head = null;
         this.tail = null;
+        
     }
+
     addNodeToHead(nodeData){
         const newNode = new DoubleListNode(nodeData);
         const currentHead = this.head;
@@ -18,6 +20,7 @@ class DoubleLinkedList{
         }
 
     }
+
     addNodeToTail(nodeData){
         const newNode = new DoubleListNode(nodeData);
         const currentTail =  this.tail
@@ -31,8 +34,8 @@ class DoubleLinkedList{
             this.head = newNode;
         }
     }
+
     removeHead(){
-     
         let currentDeleteNode = this.head;
         if(!currentDeleteNode) return "Empty List";
         this.head = currentDeleteNode.getNextNode()
@@ -41,6 +44,7 @@ class DoubleLinkedList{
             this.removeTail()
         }
     }
+
     removeTail(){
         let removedNode = this.tail;
         if(!removedNode) return "Empty List";
@@ -50,6 +54,7 @@ class DoubleLinkedList{
             this.removeHead()
         }
     }
+
     removeByValue(data){
         let removedNode;
         let currentNode = this.head;
@@ -73,15 +78,41 @@ class DoubleLinkedList{
             nextNode.setPreviousNode(previousNode)
         }
     }
+
     printList(){
         let currentNode = this.head;
         let output = `<<head>>`
         while(currentNode){
-            output += `<<${currentNode.data}>>`
+            output += ` <-${currentNode.value}-> `
             currentNode = currentNode.getNextNode()
         }
         output += `<<Tail>>`
-        return output
+        console.log(output)
+    }
+
+    reverseDoubleList() {
+        // Write your code here
+        let currentHead = this.head;
+        let prev; 
+        if(currentHead === null){
+            return;
+        }else{
+            prev = currentHead.previous
+        }
+        while(currentHead){
+            let temp_next = currentHead.next
+            currentHead.setNextNode(currentHead.previous);
+            currentHead.setPreviousNode(temp_next)
+            prev = currentHead
+            currentHead = currentHead.previous
+        }
+       
+        this.head = prev
+        //console.log(this.head)
+        // return currentHead
     }
 
 }
+module.exports = DoubleLinkedList;
+
+

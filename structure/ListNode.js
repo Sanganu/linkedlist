@@ -4,10 +4,11 @@ class ListNode{
         this.next = null
     }
     setNextNode(node){
-        if(!(node instanceof ListNode)){
+        // console.log(node)
+        if(!(node instanceof ListNode) && node !== null){
             throw new Error('ListNode Data type mismatch')
         }
-        this.next = node;
+        this.next = node; 
     }
 
     getNextNode(){
@@ -16,6 +17,10 @@ class ListNode{
 
     getData(){
         return this.value;
+    }
+
+    updateData(value){
+        this.value = value
     }
 }
 
