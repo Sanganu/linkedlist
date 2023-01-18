@@ -75,4 +75,4 @@ breakfast.forEach(item => {
 breakFastQueue.printQueueList()
 breakFastQueue.dequeue()
 breakFastQueue.dequeue()
-breakFastQueue.printQueueList()
+breakFastQueue.printQueueList() 
