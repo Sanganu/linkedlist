@@ -3,8 +3,9 @@ Nodejs
 
 ## UserStory
 
-__ Implementing Linked list structure (single and double ) and adding methods to manipulate 
-the linked list.__
+__Linked list structure (single and double ) and adding methods to manipulate.__
+
+__Queue Structure__
 
 
 
