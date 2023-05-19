@@ -1,4 +1,5 @@
 const LinkedList = require("./LinkedList");
+const Diagram = require("cli-diagram")
 
 //Last In First out
 
@@ -32,6 +33,18 @@ class Stack{
             throw new Error ("Empty Stack")
         }
     }
+    printList(){
+        let currentNode = this.stack.head
+        const introDia = new Diagram()
+        introDia.box(`Stack Current Size: ${this.size}\n Stack Max Size: ${this.maxSize}`)
+        while(currentNode !== null){
+            const myDiagram = new Diagram()
+            myDiagram.box(currentNode.getData())
+            currentNode = currentNode.getNextNode();
+            console.log(myDiagram.draw());
+        }
+    }
 }
 
 
+module.exports = Stack;

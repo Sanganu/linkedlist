@@ -1,4 +1,6 @@
 const LinkedList = require("./LinkedList");
+const Diagram = require("cli-diagram")
+
 // First In First Out
 class Queue {
     constructor(maxSize = Infinity) {
@@ -32,6 +34,7 @@ class Queue {
    printQueueList(){
     console.log('---------------- Queue FIFO ------------------')
     this.queue.printList()
+    
    }
 
 }

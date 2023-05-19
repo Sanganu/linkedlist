@@ -1,5 +1,6 @@
 const ListNode = require("./ListNode");
-const Diagram = require("cli-diagram")
+const Diagram = require("cli-diagram");
+
 class LinkedList {
     constructor() {
         this.head = null;

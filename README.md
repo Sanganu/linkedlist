@@ -26,3 +26,7 @@ __Queue Structure__
 
 
 
+![Stack 1](images/screen_4.png)
+
+
+![Stack 2](images/scree_5.png)
