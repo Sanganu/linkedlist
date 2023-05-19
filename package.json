@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose test/*",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "author": "Sangeetha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cli-diagram": "^0.3.0"
+  }
 }

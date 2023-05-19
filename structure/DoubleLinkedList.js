@@ -1,5 +1,5 @@
 const DoubleListNode = require("./DoubleListNode");
-
+const Diagram = require("cli-diagram")
 class DoubleLinkedList{
     constructor(){
         this.head = null;
@@ -81,13 +81,23 @@ class DoubleLinkedList{
 
     printList(){
         let currentNode = this.head;
-        let output = `<<head>>`
+        const myDiagram = new Diagram()
         while(currentNode){
-            output += ` <-${currentNode.value}-> `
+            myDiagram.box(currentNode.value)
             currentNode = currentNode.getNextNode()
+            if(currentNode !== null){
+                myDiagram.arrow(['-->', '<--'])
+            }
         }
-        output += `<<Tail>>`
-        console.log(output)
+        console.log(myDiagram.draw())
+        
+        // let output = `<<head>>`
+        // while(currentNode){
+        //     output += ` <-${currentNode.value}-> `
+        //     currentNode = currentNode.getNextNode()
+        // }
+        // output += `<<Tail>>`
+        // console.log(output)
     }
 
     reverseDoubleList() {

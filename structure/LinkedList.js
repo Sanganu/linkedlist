@@ -1,5 +1,5 @@
 const ListNode = require("./ListNode");
-
+const Diagram = require("cli-diagram")
 class LinkedList {
     constructor() {
         this.head = null;
@@ -34,14 +34,26 @@ class LinkedList {
     }
     printList() {
         let currentNode = this.head;
-        let output = '<head> ';
-        while (currentNode !== null) {
-            output += currentNode.getData() + ' -> ';
-            currentNode = currentNode.getNextNode();
-        }
-        output += '<tail>';
+        const myDiagram = new Diagram()
        
-        console.log(output);
+        while (currentNode !== null) {
+            myDiagram.box(currentNode.getData())
+            currentNode = currentNode.getNextNode();
+            if(currentNode !== null){
+                myDiagram.arrow(['-->'])
+            }
+        }
+       
+       
+        console.log(myDiagram.draw());
+        // let output = '<head> ';
+        // while (currentNode !== null) {
+        //     output += currentNode.getData() + ' -> ';
+        //     currentNode = currentNode.getNextNode();
+        // }
+        // output += '<tail>';
+       
+        // console.log(output);
     }
 
 }
